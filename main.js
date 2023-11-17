@@ -1,8 +1,10 @@
 import './scss/main.scss'
+import { listenToViewport, positionYReached } from './js/utils/viewport.js'
+
 // import javascriptLogo from './javascript.svg'
 // import viteLogo from '/vite.svg'
 // import { setupCounter } from './js/counter.js'
-import { listenToViewport, positionYReached } from './js/utils/viewport.js'
+
 //  document.querySelector('#app main .vite-content').innerHTML = `
 //   <div>
 //     <a href="https://vitejs.dev" target="_blank">

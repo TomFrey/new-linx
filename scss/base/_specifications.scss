@@ -13,7 +13,7 @@ $standardTextFont: "Alegreya Sans", "Arial", "sans-serif";
 $standardTextColor: #000000;
 $standardBackgroundColor: #FFFFFF;
 $titleBackgroundColor: rgba($standardBackgroundColor, 0.8);
-$navBackgroundColor: $standardBackgroundColor;
+$navBackgroundColor: #0ABBEF;
 
 
 /*** sizes ***/
@@ -23,17 +23,32 @@ $standardFontSize: 16px;
 $basicWidth: 8px;
 $basicHeight: 8px;
 $textSize: 1rem;
-$titleSize: 3.0rem;
+$titleSize: 2.0rem;
 $navigationSize: 1.4rem;
 $heightHeader: 7*$basicHeight;
 $heightNavigation: 7*$basicHeight;
 
+
+
+@mixin pageTitleTextFont(){
+	color: $standardTextColor;
+	font-family: $standardTextFont;
+	font-size: 1.5rem;
+	font-weight: 400;
+}
 
 @mixin titleTextFont(){
 	color: $standardTextColor;
 	font-family: $titleFont;
 	font-size: $titleSize;
 	font-weight: 100;
+}
+
+@mixin standardTextFont(){
+	color: $standardTextColor;
+	font-family: $standardTextFont;
+	font-size: 1.3rem;
+	font-weight: 300;
 }
 
 @mixin navigationTextFont(){
@@ -48,18 +63,4 @@ $heightNavigation: 7*$basicHeight;
 	font-family: $navigationFont;
 	font-size: 1.2*$navigationSize;
 	font-weight: 400;
-}
-
-@mixin pageTitleTextFont(){
-	color: $standardTextColor;
-	font-family: $standardTextFont;
-	font-size: 1.5rem;
-	font-weight: 500;
-}
-
-@mixin standardTextFont(){
-	color: $standardTextColor;
-	font-family: $standardTextFont;
-	font-size: 1.3rem;
-	font-weight: 300;
 }
