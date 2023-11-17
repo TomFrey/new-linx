@@ -1,9 +1,9 @@
 import './scss/main.scss'
-import javascriptLogo from './javascript.svg'
-import viteLogo from '/vite.svg'
-import { setupCounter } from './counter.js'
-
-// document.querySelector('#app main .vite-content').innerHTML = `
+// import javascriptLogo from './javascript.svg'
+// import viteLogo from '/vite.svg'
+// import { setupCounter } from './js/counter.js'
+import { listenToViewport, positionYReached } from './js/utils/viewport.js'
+//  document.querySelector('#app main .vite-content').innerHTML = `
 //   <div>
 //     <a href="https://vitejs.dev" target="_blank">
 //       <img src="${viteLogo}" class="logo" alt="Vite logo" />
@@ -11,7 +11,7 @@ import { setupCounter } from './counter.js'
 //     <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
 //       <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
 //     </a>
-//     <h1>Hello Vite!</h1>
+//      <h1>Hello Vite!</h1>
 //     <div class="card">
 //       <button id="counter" type="button"></button>
 //     </div>
@@ -21,4 +21,6 @@ import { setupCounter } from './counter.js'
 //   </div>
 // `
 
-setupCounter(document.querySelector('#counter'))
+//setupCounter(document.querySelector('#counter'))
+listenToViewport();
+positionYReached(35);

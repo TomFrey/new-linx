@@ -58,7 +58,7 @@
  
     header{
         background-color: $standardBackgroundColor;
-        padding-bottom: 2*$basicHeight;
+        padding-bottom: $basicHeight;
 
         .title{
             @include titleTextFont();
@@ -69,7 +69,12 @@
         }
 
         img{
-            width: 30%;
+            width: 40%;
+            transition: width 1s ease-in-out;
+        }
+
+        img.scrolledDown{
+            width: 15%;
         }
     }
  
@@ -86,17 +91,17 @@
         padding: 2*$basicHeight $basicWidth;
         
         .page-item{
-        margin-bottom: 2*$basicHeight;
+            margin-bottom: 25%;
         }
 
         .page-title{
-        @include pageTitleTextFont();
-        margin-bottom: $basicHeight;
+            @include pageTitleTextFont();
+            margin-bottom: $basicHeight;
         }
 
         .page-text{
-        @include standardTextFont();
-        margin-bottom: $basicHeight;
+            @include standardTextFont();
+            margin-bottom: $basicHeight;
         }
     }
  
@@ -115,13 +120,30 @@
  /* ************************************************************* */
  /* *********** ab hier für mobile querformat ******************* */
  @media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
-   .wrapper{
-     header{
-       .title{
-         font-size: 3.5rem;
-       }
-     }
-   }
+    .wrapper{
+        header{
+            padding-bottom: 2*$basicHeight;
+
+            .title{
+                font-size: 3.5rem;
+            }
+
+            img{
+                width: 35%;
+                transition: width 1s ease-in-out;
+            }
+
+            img.scrolledDown{
+                width: 15%;
+            }
+        }
+
+        main{
+            .page-item{
+                margin-bottom: 10%;
+            }
+        }
+    }
  }
  
  
@@ -174,7 +196,7 @@
        padding: 3*$basicHeight 2*$basicWidth;
  
        .page-item{
-         margin-bottom: 4*$basicHeight;
+            margin-bottom: 15%;
        }
      }
  
