@@ -1,5 +1,5 @@
 import './scss/main.scss'
-import { listenToViewport, positionYReached } from './js/utils/viewport.js'
+import { toggleClassWhenElementInViewport, toggleClassWhenYPosReached } from './js/utils/viewportScrolling.js'
 
 // import javascriptLogo from './javascript.svg'
 // import viteLogo from '/vite.svg'
@@ -23,6 +23,5 @@ import { listenToViewport, positionYReached } from './js/utils/viewport.js'
 //   </div>
 // `
 
-//setupCounter(document.querySelector('#counter'))
-listenToViewport();
-positionYReached(35);
+toggleClassWhenYPosReached(40);
+toggleClassWhenElementInViewport();
