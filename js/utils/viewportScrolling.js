@@ -36,6 +36,7 @@ function toggleClassWhenElementInViewport() {
 
 
 function toggleClassWhenYPosReached(yPos){
+    let scrolling = false;
     let elements = document.querySelectorAll('.squeeze-header-when-scrolled-down');
 
     function yPositionBiggerThen(yParameter) {
@@ -55,6 +56,16 @@ function toggleClassWhenYPosReached(yPos){
         });
     }
     
+    // window.addEventListener('scroll', (event) => {
+    //     scrolling = true;
+    //     setInterval(() => {
+    //         if (scrolling) {
+    //             scrolling = false;
+    //             toggleClasses();
+    //         }
+    //     },300);
+    // });
+
     window.addEventListener('scroll', (event) => {
         toggleClasses();
     });
