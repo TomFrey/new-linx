@@ -1,0 +1,80 @@
+.picture-wrapper{
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    align-content: space-around;
+    margin: $basicHeight $basicWidth;
+
+    .picture-item{
+        flex: 1 1 100%;
+        margin-top: $basicHeight;
+        margin-bottom: $basicWidth;
+        text-align: center;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .imageWithCaption__img{
+        width: 100%;
+    }
+    
+    .imageWithCaption__caption{
+        display: block;
+        margin-bottom: $basicHeight;
+    }
+}
+
+
+/* ************************************************************* */
+/* *********** ab hier für mobile querformat ******************* */
+@media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
+    .picture-wrapper{
+        .picture-item{
+            flex: 1 1 50%;
+
+            img{
+                width: 90%;
+            }
+        }
+    }
+}
+
+
+/* *************************************************** */
+/* *********** ab hier für desktop ******************* */
+@media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
+    .picture-wrapper{
+        margin: 4*$basicHeight $basicWidth;
+
+        .picture-item{
+            flex: 1 1 33%;
+            margin-top: 2*$basicHeight;
+            margin-bottom: 2*$basicWidth;
+        }
+
+        .imageWithCaption {
+            margin-bottom: $basicHeight;
+        }
+    
+        .imageWithCaption__img{
+            position: relative;
+            z-index: 1;
+        }
+        
+        .imageWithCaption__caption {
+            position: relative;
+            bottom: 50px;
+            z-index: 0;
+        }
+        
+        .imageWithCaption:hover {
+           
+            .imageWithCaption__caption {
+                bottom: 0px;
+                transition: bottom 0.5s ease-in-out 1ms;
+            }
+        }
+    }
+}

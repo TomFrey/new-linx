@@ -9,6 +9,10 @@ export default {
     }),
   ],
 
+
+  //Seiten die in der Input Option aufgeführt werden, werden in den Dist genommen und die Partials von Handlebar werden korrekt eingesetzt.
+  //Ist eine Seite im public Ordner werden diese File auto. in den Dist genommen, aber die Partials werden nicht eingesetzt. Führt man die 
+  //File im public Ordner in den Input Optionen auf 'd: resolve(__dirname, 'public/uns.html')' sind sie doppelt im Dist Ordner.
   build: {
     rollupOptions: {
       input: {

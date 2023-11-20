@@ -8,12 +8,14 @@
  */
  @import "base/reset";
  @import "base/specifications";
+ @import "base/grids";
 
  /**
   * Components
   */
  @import "components/navigation";
  @import "components/produkt-container";
+ @import "components/picture-gallery";
 
  
  
@@ -100,12 +102,18 @@
 
         .page-title{
             @include titleTextFont();
-            margin-bottom: $basicHeight;
+            margin-bottom: 2*$basicHeight;
         }
 
         .page-text{
             @include standardTextFont();
             margin-bottom: $basicHeight;
+        }
+    }
+
+    .map{
+        iframe{
+            max-width: 100%;
         }
     }
  
@@ -241,7 +249,7 @@
 
             .page-title{
                 font-size: 3vw;
-                margin-bottom: 2*$basicHeight;
+                margin-bottom: 4*$basicHeight;
             }
 
             .page-item{
