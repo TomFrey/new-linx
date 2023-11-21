@@ -10,14 +10,18 @@
         margin-top: $basicHeight;
         margin-bottom: $basicWidth;
         text-align: center;
-
         img{
             width: 100%;
         }
     }
 
-    .imageWithCaption__img{
-        width: 100%;
+    .picture-item.animate-in-viewport{
+        opacity: 0;
+        transition: all 1s ease-in-out;
+    }
+
+    .picture-item.animate-in-viewport.visible{
+        opacity: 1;
     }
     
     .imageWithCaption__caption{
