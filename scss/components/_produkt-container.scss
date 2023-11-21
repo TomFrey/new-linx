@@ -1,7 +1,8 @@
-.produkt-item{
+a.produkt-item-wrapper .produkt-item{
     display: flex;
     flex-flow: column nowrap;
     margin-bottom: 25%;
+    color: $standardTextColor;
 }
 
 .produkt-item-text.animate-in-viewport, .produkt-item-text__right.animate-in-viewport{
@@ -86,7 +87,7 @@
 /* ************************************************************* */
 /* *********** ab hier für mobile querformat ******************* */
 @media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
-    .produkt-item{
+    a.produkt-item-wrapper .produkt-item {
         margin-bottom: 15%;
     }
 
@@ -153,12 +154,16 @@
 /* *************************************************** */
 /* *********** ab hier für desktop ******************* */
 @media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
-    .produkt-item{
+    a.produkt-item-wrapper .produkt-item {
         display: flex;
         flex-flow: row nowrap;
         align-items: flex-start;
         margin-bottom: 15%;
+        padding: 2*$basicHeight 2*$basicWidth;
+        border-radius: 8px;
     }
+
+   
 
     .produkt-item-text.animate-in-viewport, .produkt-item-text__right.animate-in-viewport{
         flex: 1 1 50%;
@@ -239,13 +244,19 @@
             max-width: 42%;
         }
     }
+
+    a.produkt-item-wrapper:hover{
+        .produkt-item{
+            background-color: rgba($color: $navBackgroundColor, $alpha: 0.2);
+        }
+    }
 }
 
 
 /* *************************************************** */
 /* *********** ab hier für desktop ******************* */
 @media screen and (min-width: $maxWidth) {    // wenn Bildschirm die maximale Breite erreicht hat
-    .produkt-item{
+    .produkt-item a{
         margin-bottom: 250px;
     }
 
