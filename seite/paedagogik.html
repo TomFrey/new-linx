@@ -10,13 +10,17 @@
   </head>
 
   <body>
-
+    <div class="overlay-cover" >
+    </div>
     <div id="app" class="wrapper">
       <div class="side-space--left"></div>
 
       <div class="stickyHeader-wrapper">
 
-        {{> header }}
+        <header>
+          <img src="/assets/images/Logo_trans_sw_kl.svg" alt="mitLinXlernen AG">
+       </header>
+
         {{> navigation }}
 
       </div>
@@ -24,21 +28,36 @@
       <main>
       
 
-        <div class="page-item">
-          <div class="page-title">
-            <span>LinX Pädagogik</span>
+        <div class="overlay-box">
+          <a href="javascript:;" class="overlay-box-close">X</a>
+        
+          <div class="overlay-box-content">
+            <div class="overlay-box-content-image">
+              <img src="/assets/images/paedagogik/farn.webp" alt="LinX-Pädagigik heisst, zulassen.">
+            </div>
+           
+            <div class="overlay-box-content-text">
+              <p class="overlay-box-content-text__title">
+                LinX&reg; - Pädagogik
+              </p>
+
+              <p class="overlay-box-content-text__leed">
+                Den Menschen nicht erziehen wollen.
+                Geschehen lassen, Mut haben, nicht vorweg nehmen, vertrauen...
+              </p>
+
+              <p class="overlay-box-content-text__text">
+                Ihm ein Umfeld zur Verfügung stellen, wo er sich in seiner Gesamtheit entwickeln kann. Körperlich, Geistig, Seelisch.
+                Dies beinhaltet das Einbeziehen des Göttlichen in einer selbstverständlichen Spiritualität, die nur wahr nimmt, was genau in diesem Moment ist, ohne daraus eine Regel zu machen.
+                Hier entsteht die Sprache, ein Input, oder Bild zur entsprechenden Person oder zur Gruppe.
+                Voraussetzung für ein solches Lernen:
+                Sich selber nicht begrenzen wollen.
+              </p>
+            </div>
           </div>
-          <div class="page-text"> 
-            <p>
-            Herzlich willkommen auf der Webseite der mitLinXlernen AG. Wir sind kleine Firma, respektive eine handvoll Menschen, die sich darin 
-            versuchen ein Lernen und Lehren zu praktizieren, wo der Mensch im Zentrum steht. Wo es kein Müssen, aber ein Wollen, Dürfen und Ausprobieren gibt.
-            Wo du nicht gut sein musst, aber deiner besten Version immer näher kommen darfst.
-          </p>
-          <p>
-            Auch wir haben uns weiterentwickelt und so wurden, aus einem kleinen Ganzen, viele, bunte Teile, mit dem gleichen Kern. 
-          </p>
-        </div>
-         
+
+        
+          
         </div>
 
 

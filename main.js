@@ -1,5 +1,6 @@
 import './scss/main.scss'
 import { toggleClassWhenElementInViewport, toggleClassWhenYPosReached } from './js/utils/viewportScrolling.js'
+import { initNavigation } from './js/navigation.js'
 
 // import javascriptLogo from './javascript.svg'
 // import viteLogo from '/vite.svg'
@@ -23,5 +24,6 @@ import { toggleClassWhenElementInViewport, toggleClassWhenYPosReached } from './
 //   </div>
 // `
 
+initNavigation();
 toggleClassWhenYPosReached(40);
 toggleClassWhenElementInViewport();

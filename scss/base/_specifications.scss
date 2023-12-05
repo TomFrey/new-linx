@@ -7,6 +7,7 @@ $breakpoint-medium: 440px;
 $titleFont: "Alegreya Sans SC", "Arial", "sans-serif";
 $navigationFont: "Alegreya Sans", "Arial", "sans-serif";
 $standardTextFont: "Alegreya Sans", "Arial", "sans-serif";
+$lyricTextFont: "Alegreya SC", "Arial", "sans-serif";
 
 
 /*** colors ***/
@@ -71,4 +72,20 @@ $heightNavigation: 7*$basicHeight;
 	font-family: $standardTextFont;
 	font-size: 1.5rem;
 	font-weight: 300;
+}
+
+@mixin lyricTitelFont(){
+	color: $standardTextColor;
+	font-family: $lyricTextFont;
+	font-size: 1.8rem;
+	font-style: normal;
+	font-weight: 500;
+}
+
+@mixin lyricTextFont(){
+	color: $standardTextColor;
+	font-family: $lyricTextFont;
+	font-size: 1.5rem;
+	font-style: italic;
+	font-weight: 400;
 }

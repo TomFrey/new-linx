@@ -1,0 +1,190 @@
+.team-item{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  margin-bottom: 2*$basicHeight;
+}
+
+.team-item-wrapper{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.team-item-text{
+  max-width: 100%;
+}
+
+.team-item-text-list{
+  margin-top: $basicHeight;
+  margin-left: 2*$basicWidth;
+  
+  li{
+    list-style-type: square;
+    line-height: 1.5rem;
+  }
+}
+
+.lyrics{
+  @include lyricTextFont();
+  font-size: 2.0vw;
+  text-align: center;
+  margin: 3*$basicHeight 0 $basicHeight 0;
+  line-height: 1.8vw;
+
+  .lyrics-title{
+    @include lyricTitelFont();
+    font-size: 2.2vw;
+    margin-bottom: $basicHeight;
+  }
+}
+
+.team-item-picture{
+  img{
+    max-width: 100%;
+  }
+}
+
+.team-item-text-name{
+    @include titleTextFont();
+    margin-bottom: 3*$basicHeight;
+}
+
+
+/* ************************************************************* */
+/* *********** ab hier für mobile querformat ******************* */
+@media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
+  .team-item{
+    display: flex;
+    margin-bottom: 6*$basicHeight;
+  }
+
+
+  .team-item-wrapper{
+    position: relative;
+    max-width: 300px;
+  }
+
+  .team-item-picture{
+    position: relative;
+    left: 0;
+    transition: left 0.5s ease-in-out;
+    z-index: 1;
+  }
+
+  .team-item-text{
+    position: absolute;
+    top: 4px;
+    left: 0;
+    transition: left 0.5s ease-in-out;
+    z-index: 0;
+    width: 300px;
+    padding-left: $basicWidth;
+  }
+
+  .team-item-text-list{
+    margin-top: $basicHeight;
+    margin-left: 2*$basicWidth;
+    
+    li{
+      list-style-type: square;
+      line-height: 1.5rem;
+    }
+  }
+
+  .lyrics{
+    @include lyricTextFont();
+    font-size: 2.0vw;
+    text-align: center;
+    margin: 3*$basicHeight 0 $basicHeight 0;
+    line-height: 1.8vw;
+
+    .lyrics-title{
+      @include lyricTitelFont();
+      font-size: 2.2vw;
+      margin-bottom: $basicHeight;
+    }
+  }
+
+
+  .team-item.visible{
+    .team-item-wrapper{
+      max-width: 600px;
+    }
+
+    .team-item-picture{
+     left: -150px;
+     transition: left 0.5s ease-in-out;
+    }
+
+    .team-item-text{
+      left: 150px;
+      transition: left 0.5s ease-in-out;
+    }
+  }
+}
+
+
+/* *************************************************** */
+/* *********** ab hier für desktop ******************* */
+@media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
+  .team-item{
+    margin-bottom: 3*$basicHeight;
+  }
+
+  .team-item-wrapper{
+    max-width: 500px;
+  }
+
+  .team-item-text{
+    width: 500px;
+    padding-left: 2*$basicWidth;
+  }
+
+  .lyrics{
+    @include lyricTextFont();
+    font-size: 1.6vw;
+    line-height: 1.8vw;
+
+    .lyrics-title{
+      @include lyricTitelFont();
+      font-size: 1.8vw;
+    }
+  }
+
+  .team-item.visible{
+    .team-item-wrapper{
+      max-width: 1000px;
+    }
+
+    .team-item-picture{
+     left: -250px;
+    }
+
+    .team-item-text{
+      left: 250px;
+    }
+  }
+}
+
+/* ********************************************************************* */
+ /* *********** ab hier für desktop (maximale Breite) ******************* */
+ @media screen and (min-width: $maxWidth) {    // wenn Bildschirm die maximale Breite erreicht hat
+  .team-item{
+    display: flex;
+    margin-bottom: 4*$basicHeight;
+  }
+
+  .team-item-text{
+    padding-left: 3*$basicWidth;
+  }
+
+  .lyrics{
+    @include lyricTextFont();
+    line-height: 1.8rem;
+
+    .lyrics-title{
+      @include lyricTitelFont();
+    }
+  }
+
+ }

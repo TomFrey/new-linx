@@ -1,5 +1,5 @@
 /**
- * Jedes Element das die css Klasse 'animate-in-vieport' hat. Erhält, wenn das Element im Viewport ist die Klasse 'visible'.
+ * Jedes Element das die css Klasse 'animate-in-viewport' hat. Erhält, wenn das Element im Viewport ist die Klasse 'visible'.
  * 
  * Mögliche Konfigurationen:
  * - Wenn zusätzlich die Klasse 'whole-element-in-viewport' am Element hängt, dann wird 'visible' erst gesetzt, wenn das 
@@ -84,15 +84,15 @@ function toggleClassWhenYPosReached(yPos){
         });
     }
     
-    // window.addEventListener('scroll', (event) => {
-    //     scrolling = true;
-    //     setInterval(() => {
-    //         if (scrolling) {
-    //             scrolling = false;
-    //             toggleClasses();
-    //         }
-    //     },300);
-    // });
+    window.addEventListener('scroll', (event) => {
+        scrolling = true;
+        setInterval(() => {
+            if (scrolling) {
+                scrolling = false;
+                toggleClasses();
+            }
+        },300);
+    });
 
     window.addEventListener('scroll', (event) => {
         toggleClasses();

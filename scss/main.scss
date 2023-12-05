@@ -16,6 +16,8 @@
  @import "components/navigation";
  @import "components/produkt-container";
  @import "components/picture-gallery";
+ @import "components/overlay-box";
+ @import "components/team";
 
  
  
@@ -203,7 +205,7 @@
 
         header{
             height: 7vw;
-            transition: width 1s ease-in-out;
+            transition: height 1s ease-in-out;
 
             .title{
                 text-align: end;
@@ -211,12 +213,12 @@
                 margin-top: 5*$basicHeight;
             }
 
-            img{
+            svg{
                position: absolute;
                top: 0px;
             }
 
-            img.animate{
+            svg.animate{
                 width: 20%;
             }
         }
@@ -283,9 +285,9 @@
                 font-size: 4.8rem;
             }
 
-            img{
+            svg{
                 top: -2px;
-             }
+            }
         }
 
         nav{
