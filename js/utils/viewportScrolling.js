@@ -78,27 +78,16 @@ function toggleClassWhenYPosReached(yPos){
         elements.forEach(element => {
             if (yPositionBiggerThen(yPos)) {
                 element.classList.add('animate');
-            } else {
+            } else if (window.scrollY <= 20) {
                 element.classList.remove('animate');
             }
         });
     }
     
     window.addEventListener('scroll', (event) => {
-        scrolling = true;
-        setInterval(() => {
-            if (scrolling) {
-                scrolling = false;
-                toggleClasses();
-            }
-        },300);
-    });
-
-    window.addEventListener('scroll', (event) => {
         toggleClasses();
     });
 }
-
 
 
 export {
