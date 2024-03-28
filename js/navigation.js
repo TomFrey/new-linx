@@ -1,11 +1,6 @@
-
-
-
 function jumpBackToLastUrl(){
-    console.log('jump');
     history.back();
 }
-
 
 
 function initNavigation(){
@@ -19,7 +14,6 @@ function initNavigation(){
         });
     }
 }
-
 
 
 export {
