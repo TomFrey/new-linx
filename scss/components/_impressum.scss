@@ -1,0 +1,83 @@
+.impressum-wrapper{
+    background-color: $standardBackgroundColor;
+    padding: $basicHeight $basicWidth;
+}
+
+.impressum-title-big{
+    @include bigTitleTextFont();
+    color:  $standardTextColor;
+    font-size: 6.5vw;
+    margin-bottom: $basicHeight;
+}
+
+.impressum-title{
+    @include titleTextFont();
+    color:  $standardTextColor;
+    font-size: 1.6rem;
+    margin-bottom: $basicHeight;
+}
+
+.impressum-text{
+    @include standardTextFont();
+    color:  $standardTextColor;
+    margin-bottom: 2*$basicHeight;
+}
+
+.impressum-title-big.center,.impressum-title.center,.impressum-text.center{
+    text-align: center;
+}
+
+.impressum-contact-address{
+    @include standardTextFont();
+    color:  $standardTextColor;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-bottom: 2*$basicHeight;
+}
+
+.impressum-ordered-list{
+    list-style: decimal;
+    margin-left: 2*$basicWidth;
+    margin-bottom: 2*$basicHeight;
+}
+
+    
+
+/* ************************************************************* */
+/* *********** ab hier für mobile querformat ******************* */
+@media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
+
+    .impressum-title-big{
+        font-size: 4vw;
+    }
+}
+
+
+/* *************************************************** */
+/* *********** ab hier für desktop ******************* */
+@media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
+
+    .impressum-title-big{
+        font-size: 3vw;
+        margin: 2*$basicHeight 0;
+    }
+
+    .impressum-text{
+        margin-bottom: 4*$basicHeight;
+    }
+
+    .impressum-ordered-list{
+        margin-bottom: 4*$basicHeight;
+    }
+}
+
+
+/* *************************************************** */
+/* *********** ab hier für desktop ******************* */
+@media screen and (min-width: $maxWidth) {    // wenn Bildschirm die maximale Breite erreicht hat
+    
+}
+
+
+    

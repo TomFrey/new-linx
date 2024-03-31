@@ -13,6 +13,7 @@
  @import "components/picture-gallery";
  @import "components/overlay-box";
  @import "components/team";
+ @import "components/impressum";
 
  
  
@@ -109,18 +110,23 @@
     }
  
     footer{
-        padding: 2*$basicHeight;
+        padding: 2*$basicHeight 0;
         grid-area: 4 / 1 / 5 / 2;
-        background-color: $footerBackgroundColor;
 
-        display: flex;
-        flex-flow: column nowrap;
-        align-items: center;
-        
         .footer-wrapper{
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: center;
+        }
+
+        .footer-banner{
             display: flex;
             flex-flow: row nowrap;
             justify-content: center;
+            align-items: center;
+            background-color: $footerBackgroundColor;
+            width: 100%;
+            padding: $basicHeight $basicWidth;
         }
 
         .address{
@@ -131,6 +137,22 @@
         img {
             width: 30%;
         };
+
+
+        .footer-legal{
+            padding: $basicHeight $basicWidth;
+            text-align: center;
+
+            li:not(:last-of-type) {
+                padding-bottom: $basicHeight;
+            }
+
+            a {
+                @include footerLegalFont();
+                text-decoration: none;
+                padding: 0.5*$basicHeight 0.5*$basicWidth;
+            }
+        }
     }
  
     .side-space--left, .side-space--right{
@@ -243,8 +265,39 @@
             }
         }
 
+
         footer{
             grid-area: 4 / 2 / 5 / 3;
+    
+            img {
+                width: 25%;
+            };
+    
+            .footer-legal{
+                padding: 2*$basicHeight $basicWidth $basicHeight $basicWidth;
+                text-align: center;
+    
+                ul {
+                    display: flex;
+                    flex-flow: row nowrap;
+                }
+
+                li:last-of-type{
+                    padding-left: 2*$basicWidth;
+                }
+
+                li:not(:last-of-type) {
+                    padding-bottom: 0;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+
+                a:hover{
+                    border-bottom: 1px black solid;
+                }
+            }
         }
 
     }
@@ -285,6 +338,12 @@
 
         main{
             padding: 4*$basicHeight 2*$basicWidth;
+        }
+
+        footer{
+            img {
+                width: 20%;
+            };
         }
     }
  }

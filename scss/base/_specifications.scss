@@ -46,6 +46,13 @@ $heightNavigation: 7*$basicHeight;
 	font-weight: 100;
 }
 
+@mixin bigTitleTextFont(){
+	color: $standardTextColor;
+	font-family: $titleFont;
+	font-size: $titleSize;
+	font-weight: 100;
+}
+
 @mixin standardTextFont(){
 	color: $standardTextColor;
 	font-family: $standardTextFont;
@@ -71,6 +78,13 @@ $heightNavigation: 7*$basicHeight;
 	color: $standardTextColor;
 	font-family: $standardTextFont;
 	font-size: 1.5rem;
+	font-weight: 300;
+}
+
+@mixin footerLegalFont(){
+	color: $standardTextColor;
+	font-family: $standardTextFont;
+	font-size: 1.2rem;
 	font-weight: 300;
 }
 
