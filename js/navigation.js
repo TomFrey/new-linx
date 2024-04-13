@@ -41,8 +41,9 @@ function setSettingsDependingOnUrl() {
             ort.classList.add(SELECTED);
             break;
 
-        default: // Startseite sind die Angebote
+        case 'startseite':
             angebote.classList.add(SELECTED);
+            break;
     }
 }
 
