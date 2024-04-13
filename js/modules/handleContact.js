@@ -113,13 +113,13 @@ function initContact() {
     if (openMailClientButton !== null) {
         openMailClientButton.addEventListener('click', (event) => {
             //öffnet den Standard Mailclient
-            Crypto.linkToUnCryptMailto('nbjmup;jogpAsfusfbu.bvt{fju/di');
+            Crypto.linkToUnCryptMailto('nbjmup;jogpAnjumjoymfsofo/di');
         });
     }
 
     if (openWhatsAppButton !== null) {
         openWhatsAppButton.addEventListener('click', (event) => {
-            //öffnet Whatsapp Chat
+            //öffnet Whatsapp Chat mit der Nummer von KS
             Crypto.decryptLinkToMessenger('retreatAUSzeit', '4c505054571e0b0b53450a49410b1015131d131210161d121c');
         });
     }
