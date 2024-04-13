@@ -12,6 +12,13 @@ $lyricTextFont: "Alegreya SC", "Arial", "sans-serif";
 
 /*** colors ***/
 $standardTextColor: #000000;
+:root{
+	--md-sys-color-primary: #000000;
+	--md-sys-color-secondary: #FFFFFF;
+	--md-sys-color-tertiary: #0ABBEF;
+	--md-sys-typescale-label-large-font: "Alegreya Sans", "Arial", "sans-serif";
+}
+
 $standardBackgroundColor: #FFFFFF;
 $titleBackgroundColor: rgba($standardBackgroundColor, 0.8);
 $navBackgroundColor: #0ABBEF;
@@ -70,7 +77,7 @@ $heightNavigation: 7*$basicHeight;
 @mixin navigationSelectedTextFont(){
 	color: $standardTextColor;
 	font-family: $navigationFont;
-	font-size: 1.2*$navigationSize;
+	font-size: $navigationSize;
 	font-weight: 400;
 }
 

@@ -15,7 +15,7 @@ function ajaxCall(method, url, data) {
         request.onreadystatechange = function () {
             if (request.readyState === DONE) {
                 console.log('request.status: '+request.status);
-                console.log(request.responseText);
+                console.log('request.responseText' + request.responseText);
                 jsonResponseData = JSON.parse(request.responseText);
                 if (request.status >= 200 && request.status < 400) {
                     resolve(jsonResponseData);

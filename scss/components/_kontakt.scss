@@ -1,0 +1,142 @@
+.address .contact-link{
+    color: $standardBackgroundColor;
+}
+
+.contact-link{
+    color: $standardTextColor;
+}
+
+.contact{
+
+    .contact-wrapper{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .contact-mail-wrapper{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        margin-bottom: 2*$basicHeight;
+    }
+
+    .contact-address{
+        display: flex;
+        flex-flow: column nowrap;
+    }
+
+    .contact-mail{
+        margin-top: 2*$basicHeight;
+        margin-bottom: 2*$basicHeight;
+    }
+
+    md-outlined-text-field{
+        --md-outlined-text-field-label-text-color: var(--md-sys-color-primary);
+        --md-outlined-text-field-input-text-font: var(--md-sys-typescale-label-large-font);
+        --md-outlined-text-field-label-text-font: var(--md-sys-typescale-label-large-font);
+        --md-outlined-text-field-input-text-size: 1.8rem;
+
+        --md-outlined-text-field-label-text-size: 1.8rem;
+       // --md-outlined-text-field
+
+        width: 100%;
+        margin-bottom: $basicHeight;
+    }
+
+    md-outlined-button{
+        --md-outlined-button-container-shape: 30px;
+        --md-outlined-button-label-text-size: 1.8rem;
+        --md-outlined-button-label-text-font: var(--md-sys-typescale-label-large-font);
+        --md-outlined-button-label-text-color: var(--md-sys-color-primary);
+        --md-outlined-button-outline-color: var(--md-sys-color-primary);
+        margin-right: $basicWidth;
+    }
+
+
+    .contact-form-send-wrapper{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+    }
+
+    .contact-form__info-box{
+        text-align: center;
+    }
+   
+}
+    
+
+/* ************************************************************* */
+/* *********** ab hier für mobile querformat ******************* */
+@media screen and (min-width: $breakpoint-medium) {    // wenn Bildschirm grösser als, dann...
+
+}
+
+
+/* *************************************************** */
+/* *********** ab hier für desktop ******************* */
+@media screen and (min-width: $breakpoint-large) {    // wenn Bildschirm grösser als, dann...
+    .address .contact-link:hover{
+        color: $standardTextColor;
+    }
+
+    .contact-link:hover{
+        color: $navBackgroundColor;
+    }
+
+
+    .contact{
+
+        .contact-wrapper{
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .contact-mail-wrapper{
+            flex: 1 1 25%;
+            margin-right: 4*$basicWidth;
+        }
+
+        .contact-mail:hover{
+            g {
+                fill: #ffffff;
+                stroke: #ffffff;
+            }
+            g g {
+                fill: #000000; //$detailTitleColor;
+            }
+        }
+    
+        .contact-whatsapp:hover{
+            g g circle {
+                fill: #ffffff;
+            }
+            g g g g {
+                fill: #000000;
+            }
+        }
+
+        .contact-form-wrapper{
+            flex: 1 1 75%;
+        }
+
+        md-outlined-button{
+            --md-outlined-button-hover-label-text-color: var(--md-sys-color-secondary);
+            --md-outlined-button-hover-state-layer-color: var(--md-sys-color-primary);
+            --md-outlined-button-hover-state-layer-opacity: 0.5;
+            margin-right: 3*$basicWidth;
+        }
+
+        md-outlined-button:focus{
+            --md-outlined-button-outline-width: 3px;
+        }
+
+    }
+}
+
+
+/* *************************************************** */
+/* *********** ab hier für desktop ******************* */
+@media screen and (min-width: $maxWidth) {    // wenn Bildschirm die maximale Breite erreicht hat
+    
+}

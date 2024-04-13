@@ -21,7 +21,8 @@ export default {
         c: resolve(__dirname, 'seite/ort.html'),
         d: resolve(__dirname, 'seite/uns.html'),
         e: resolve(__dirname, 'seite/impressum.html'),
-        f: resolve(__dirname, 'seite/datenschutz.html')
+        f: resolve(__dirname, 'seite/datenschutz.html'),
+        g: resolve(__dirname, 'seite/kontakt.html')
       }
     }
   }

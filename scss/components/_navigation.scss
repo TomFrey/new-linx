@@ -11,6 +11,7 @@ nav{
         text-align: center;
   
         a{
+          @include navigationTextFont();
           color: $standardTextColor;
           text-decoration: none;
           padding: 0.5*$basicHeight 0.75*$basicWidth;
@@ -61,7 +62,13 @@ nav{
             padding: $basicHeight calc(-8px + 2%);
     
             a{
+              font-size: 1.2*$navigationSize;
               padding: 0.5*$basicHeight $basicWidth;
+            }
+
+            a.js-isSelected{
+              font-size: 1.2*$navigationSize;
+              border-bottom: 1px solid $standardTextColor;
             }
       
             a:hover{
