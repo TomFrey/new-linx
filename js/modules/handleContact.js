@@ -50,6 +50,9 @@ function isEMailValid() {
     return false;
 }
 
+// alles ausser:
+// [^<>&]*$
+
 
 function isNameValid(){
     return nameField.reportValidity();

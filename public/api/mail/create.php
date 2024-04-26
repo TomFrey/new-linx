@@ -35,7 +35,7 @@ $data = json_decode(file_get_contents("php://input"));
 
 
 // Sanitize input data
-$data->name = htmlspecialchars($data->name, ENT_COMPAT);
+$data->name = htmlspecialchars($data->name, ENT_QUOTES);
 $data->email = htmlspecialchars($data->email, ENT_QUOTES);
 $data->message = htmlspecialchars($data->message, ENT_QUOTES);
 

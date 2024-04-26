@@ -43,3 +43,11 @@ yarn create vite
 - git branch -M main
 - git remote add origin https://github.com/TomFrey/NEUESREPO.git
 - git push -u origin main
+
+
+
+## mit PHP:
+- MAMP starten auf dem dist Verzeichnis
+  (Users ▹ john ▹ Projekte ▹ mitLinXlernen ▹ newLinXDesign ▹ new-linx ▹ dist)
+- Server läuft unter: http://localhost:8888
+- nach jeder Änderung: yarn build (damit der neue Code ins dist gepackt wird)
