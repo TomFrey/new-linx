@@ -87,6 +87,21 @@ a.produkt-item-wrapper .produkt-item{
     }
 }
 
+.produkt-fake-link{
+    display: block;
+    margin-top: $basicHeight;
+    text-decoration: underline;
+    text-align: center;
+}
+
+.produkt-fake-link:before{
+    content: '-';
+}
+
+.produkt-fake-link:after{
+    content: '-';
+}
+
 
 /* ************************************************************* */
 /* *********** ab hier für mobile querformat ******************* */
@@ -254,6 +269,13 @@ a.produkt-item-wrapper .produkt-item{
             background-color: rgba($color: $navBackgroundColor, $alpha: 0.2);
         }
     }
+
+
+    .produkt-fake-link{
+        margin-top: 2*$basicHeight;
+        text-align: center;
+    }
+
 }
 
 
