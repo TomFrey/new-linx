@@ -50,36 +50,43 @@ function isEMailValid() {
     return false;
 }
 
-// alles ausser:
-// [^<>&]*$
 
-
-function isNameValid(){
-    return nameField.reportValidity();
+/**
+ * Alle Zeichen sind erlaubt, ausser: <, >, &
+ * @returns {boolean}
+ */
+function noEvilCharacter(stringToTest) {
+    const noEvilCharacterInString = new RegExp(/^[^<>&]+$/);
+    if (noEvilCharacterInString.test(stringToTest)) {
+        return true;
+    }
+    return false;
 }
 
 
-function isMessageValid(){
-    return messageField.reportValidity();
+function isFieldValid(field){
+    field.removeAttribute('error');
+    if (field.reportValidity()) {
+        if (noEvilCharacter(field.value)) {
+            return true;
+        } else {
+            field.setAttribute('error', '');
+            field.setAttribute('error-text', 'Die folgenden Zeichen sind nicht erlaubt: > < &');
+            return false;
+        }
+    } else {
+        return false;
+    }
 }
 
 
 function isFormValid(){
     if (isEMailValid()
-        && isNameValid()
-        && isMessageValid()) { 
+        && isFieldValid(nameField)
+        && isFieldValid(messageField)) { 
             return true; 
         }
         return false;
-}
-
-
-function toggleSendButton() {
-    if (isFormValid()) {
-        sendButton.removeAttribute('disabled');
-    } else {
-        sendButton.setAttribute('disabled', '');
-    }
 }
 
 
@@ -87,8 +94,6 @@ function sendFormDataToServer(contactFormData) {
     return ajaxCall('POST', '/api/mail.php', contactFormData);
 }
 
-
-//const form = document.querySelector('.contact-form-form');
 
 function sendFormData() {
     contactFormData.subject = 'Eine Nachricht über mitLinXlernen.ch';
@@ -111,7 +116,6 @@ function sendFormData() {
 }
 
 
-
 function initContact() {
     if (openMailClientButton !== null) {
         openMailClientButton.addEventListener('click', (event) => {
@@ -129,7 +133,7 @@ function initContact() {
 
     if (nameField !== null) {
         nameField.addEventListener('blur', () => {
-            isNameValid();
+            isFieldValid(nameField);
         });
     }
 
@@ -141,7 +145,7 @@ function initContact() {
 
     if (messageField !== null) {
         messageField.addEventListener('blur', () => {
-            isMessageValid();
+            isFieldValid(messageField);
         });
     }
 
