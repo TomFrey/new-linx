@@ -89,7 +89,8 @@ a.produkt-item-wrapper .produkt-item{
 
 .produkt-fake-link{
     display: block;
-    margin-top: $basicHeight;
+    margin-top: 2*$basicHeight;
+    margin-bottom: 2*$basicHeight;
     text-decoration: underline;
     text-align: center;
 }
@@ -273,6 +274,7 @@ a.produkt-item-wrapper .produkt-item{
 
     .produkt-fake-link{
         margin-top: 2*$basicHeight;
+        margin-bottom: 0;
         text-align: center;
     }
 
